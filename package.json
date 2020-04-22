@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-jr-vue-standard",
+  "version": "1.0.1",
+  "description": "自己定义的vue组件规范",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zettle/eslint-config-jr-vue-standard.git"
+  },
+  "keywords": [
+    "vue",
+    "eslint"
+  ],
+  "author": "zettle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zettle/eslint-config-jr-vue-standard/issues"
+  },
+  "homepage": "https://github.com/zettle/eslint-config-jr-vue-standard#readme"
+}
