@@ -76,7 +76,7 @@ module.exports = {
             'singleline': 300, // 如果是1行的不理
             'multiline': { // 如果是多行的，每行1个属性
                 'max': 1,
-                'allowFirstLine': true
+                'allowFirstLine': false
             }
         }],
         // =之间不要有空格
