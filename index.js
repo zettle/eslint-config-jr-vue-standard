@@ -10,12 +10,17 @@ module.exports = {
     // 'warn' | 1   - 开启规则，使用警告级别的错误：warn (不会导致程序退出)
     // 'error' | 2  - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
     rules: {
-        'indent': 'off',
+        'semi': ['error', 'always'], // 语句强制分号结尾
+        // 不在template中使用this
+        'vue/this-in-template': ['error', 'never'],
+        // 定义propname用驼峰，对ts无效
+        'vue/prop-name-casing': ['error', 'camelCase'],
         // 控制html结尾`>`的缩进
         'vue/html-closing-bracket-newline': ['error', {
             'singleline': 'never',
             'multiline': 'never'
         }],
+        'indent': 'off',
         // vue-js缩进的方式
         'vue/script-indent': ['error', 4, {
             'baseIndent': 0, // 首层缩进
