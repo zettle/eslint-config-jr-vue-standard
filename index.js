@@ -114,7 +114,7 @@ module.exports = {
                 "renderError"
             ]
         }],
-        // 在template中写组件要用中横线写法
+        // 在template中写组件要用中横线写法，ts的无法识别
         "vue/component-name-in-template-casing": ["error", "kebab-case", {
             "registeredComponentsOnly": true,
             "ignores": []
