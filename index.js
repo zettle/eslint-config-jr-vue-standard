@@ -27,12 +27,6 @@ module.exports = {
             'switchCase': 1, // switch的缩进
             'ignores': []
         }],
-        // vue-ts缩进的方式，由外部自己弄
-        // '@typescript-eslint/indent': ['error', 4, {
-        //     'baseIndent': 0, //
-        //     'switchCase': 1,
-        //     'ignores': []
-        // }],
         // vue-template的缩进方式
         'vue/html-indent': ['error', 4, { 'baseIndent': 1 }],
         // 控制html开头`<`和结尾`>`不要有空格
@@ -85,6 +79,72 @@ module.exports = {
             }
         }],
         // =之间不要有空格
-        'vue/no-spaces-around-equal-signs-in-attribute': ['error']
+        'vue/no-spaces-around-equal-signs-in-attribute': ['error'],
+        // 大驼峰命名组件的name属性
+        "vue/name-property-casing": ["error", "PascalCase"],
+        // 链接 https://eslint.vuejs.org/rules/require-direct-export.html
+        "vue/require-direct-export": ["error"],
+        // template/script/style之间要有空行
+        "vue/padding-line-between-blocks": ["error", "always"],
+        // 禁止变量名和外层的变量名相同，只在template中有效
+        "vue/no-template-shadow": ["error"],
+        // vue-js组件属性的书写顺序
+        "vue/order-in-components": ["error", {
+            "order": [
+                "el",
+                "name",
+                "parent",
+                "functional",
+                ["delimiters", "comments"],
+                ["components", "directives", "filters"],
+                "extends",
+                "mixins",
+                "inheritAttrs",
+                "model",
+                ["props", "propsData"],
+                "fetch",
+                "asyncData",
+                "data",
+                "computed",
+                "watch",
+                "LIFECYCLE_HOOKS",
+                "methods",
+                "head",
+                ["template", "render"],
+                "renderError"
+            ]
+        }],
+        // 在template中写组件要用中横线写法
+        "vue/component-name-in-template-casing": ["error", "kebab-case", {
+            "registeredComponentsOnly": true,
+            "ignores": []
+        }],
+        // 多行html换行
+        "vue/multiline-html-element-content-newline": ["error", {
+            "ignoreWhenEmpty": true,
+            "ignores": ["pre", "textarea"],
+            "allowEmptyLines": false
+        }]
+
+        // vue-ts缩进的方式，由外部自己弄
+        // '@typescript-eslint/indent': ['error', 4, {
+        //     'baseIndent': 0, //
+        //     'switchCase': 1,
+        //     'ignores': []
+        // }],
+
+        // 检查每个.sync修饰符是否有效
+        // "vue/valid-v-bind-sync": ["error"],
+        // 检查每个.v-mode修饰符是否有效
+        // "vue/no-v-model-argument": ["error"],
+
+        // "vue/singleline-html-element-content-newline": ["error", {
+        //     "ignoreWhenNoAttributes": false,
+        //     "ignoreWhenEmpty": true,
+        //     "ignores": ["pre", "textarea"]
+        // }],
+
+        // name属性和文件名称保持一致
+        // "vue/match-component-file-name": ["error", { "extensions": ["vue"], "shouldMatchCase": false }],
     }
 };
