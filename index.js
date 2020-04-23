@@ -27,12 +27,12 @@ module.exports = {
             'switchCase': 1, // switch的缩进
             'ignores': []
         }],
-        // vue-ts缩进的方式
-        '@typescript-eslint/indent': ['error', 4, {
-            'baseIndent': 0, //
-            'switchCase': 1,
-            'ignores': []
-        }],
+        // vue-ts缩进的方式，由外部自己弄
+        // '@typescript-eslint/indent': ['error', 4, {
+        //     'baseIndent': 0, //
+        //     'switchCase': 1,
+        //     'ignores': []
+        // }],
         // vue-template的缩进方式
         'vue/html-indent': ['error', 4, { 'baseIndent': 1 }],
         // 控制html开头`<`和结尾`>`不要有空格
