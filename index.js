@@ -33,7 +33,7 @@ module.exports = {
         'vue/html-closing-bracket-spacing': ['error', {
             'startTag': 'never',
             'endTag': 'never',
-            'selfClosingTag': 'never'
+            'selfClosingTag': 'always'
         }],
         // template-script-style的顺序
         'vue/component-tags-order': ['error', {
